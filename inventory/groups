@@ -1,97 +1,97 @@
 [role_deployment_server]
-ds
+auxs-vm0
 
 [role_deployer]
-ds
+auxs-vm0
 
 [splunk_env_splkdefineTAG]
-ds
-cm
-mc
-lm
-idx1
-idx2
-idx3
-idx4
-shstage
-shsa
-sh1
-sh2
-sh3
-hf1
-hf2
-hf3
-hf4
+auxs-vm0
+cm-vm0
+auxb-vm0
+auxs-vm1
+idx-vm0
+idx-vm1
+idx-vm2
+idx-vm3
+auxb-vm1
+sh-vm0
+sh-vm1
+sh-vm2
+sh-vm3
+hf-vm0
+hf-vm1
+hf-vm2
+hf-vm3
 
 [shcluster_shc1]
-ds
-sh1
-sh2
-sh3
+auxs-vm0
+sh-vm0
+sh-vm1
+sh-vm2
 
 [role_cluster_master]
-cm
+cm-vm0
 
 [idxcluster_idxc1]
-cm
-mc
-lm
-idx1
-idx2
-idx3
-idx4
+cm-vm0
+auxb-vm0
+auxs-vm1
+idx-vm0
+idx-vm1
+idx-vm2
+idx-vm3
 
 [role_monitoring_console]
-mc
+auxb-vm0
 
 [role_license_master]
-lm
+auxs-vm1
 
 [role_indexer]
-idx1
-idx2
-idx3
-idx4
+idx-vm0
+idx-vm1
+idx-vm2
+idx-vm3
 
 [idxcluster_idxc1_site1]
-idx1
-idx2
+idx-vm0
+idx-vm2
 
 [idxcluster_idxc1_site2]
-idx3
-idx4
+idx-vm1
+idx-vm3
 
 [role_search_head]
-shsa
-sh1
-sh2
-sh3
-shstage
+sh-vm0
+sh-vm1
+sh-vm2
+sh-vm3
+auxb-vm1
 
 [role_heavy_forwarder]
-hf1
-hf2
-hf3
-hf4
+hf-vm0
+hf-vm1
+hf-vm2
+hf-vm3
 
 [output_splkdefineTAG_all]
-ds
-cm
-mc
-lm
-shsa
-sh1
-sh2
-sh3
-hf1
-hf2
-hf3
-hf4
+auxs-vm0
+cm-vm0
+auxbig-vm0
+auxs-vm1
+sh-vm0
+sh-vm1
+sh-vm2
+sh-vm3
+hf-vm0
+hf-vm1
+hf-vm2
+hf-vm3
 
 [search_peer_splkdefineTAG_all]
-mc
-shsa
-sh1
-sh2
-sh3
+auxb-vm0
+sh-vm0
+sh-vm1
+sh-vm2
+sh-vm3
 
