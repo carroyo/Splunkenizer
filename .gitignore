@@ -16,7 +16,7 @@ config
 # Auth directory
 auth
 # Inventory directory
-inventory
+#inventory
 # Apps directory
 apps
 # Helpers directory

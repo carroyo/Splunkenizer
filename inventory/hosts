@@ -1,0 +1,17 @@
+ds
+cm site=site0
+mc site=site0
+lm site=site0
+idx1 site=site1
+idx2 site=site1
+idx3 site=site2
+idx4 site=site2
+shstage
+shsa
+sh1
+sh2
+sh3
+hf1
+hf2
+hf3
+hf4

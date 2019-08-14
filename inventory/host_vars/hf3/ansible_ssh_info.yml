@@ -1,0 +1,5 @@
+---
+ansible_host: dummysplunk-publiciphf2.westeurope.cloudapp.azure.com
+ansible_port: 22
+ansible_user: sysop
+ansible_ssh_private_key_file: "/Users/cadominguez/Desktop/azuresan.pem"

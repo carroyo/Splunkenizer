@@ -1,0 +1,26 @@
+---
+splunk_env_name: splkdefineTAG
+splunk_version: latest
+splunk_admin_password: splunklab
+splunk_outputs: all
+splunk_search_peers: all
+splunk_secret_share:
+  splunk: false
+  splunkforwarder: false
+  equal: false
+splunk_volume_defaults:
+  homePath: primary
+  coldPath: primary
+splunk_ssl:
+  web:
+    enable: false
+    own_certs: false
+    config:
+      enableSplunkWebSSL: true
+  inputs:
+    enable: false
+    own_certs: false
+  outputs:
+    enable: false
+    own_certs: false
+splunk_license_file: Splunk_Enterprise.lic

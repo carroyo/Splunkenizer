@@ -1,0 +1,8 @@
+---
+splunk_outputs_list:
+  idxcluster:
+    idxc1:
+    - idx1
+    - idx2
+    - idx3
+    - idx4
