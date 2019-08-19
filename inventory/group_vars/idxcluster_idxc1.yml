@@ -1,6 +1,6 @@
 ---
 idxc_name: idxc1
-idxc_password: splunkidxc
+idxc_password: splsdfgsfgunkigahdxc163567
 idxc_replication_port: 8080
 idxc_site_rf: origin:2, total:3
 idxc_site_sf: origin:1, total:2

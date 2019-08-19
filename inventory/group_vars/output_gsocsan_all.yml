@@ -1,0 +1,8 @@
+---
+splunk_outputs_list:
+  idxcluster:
+    idxc1:
+    - idx-vm0
+    - idx-vm1
+    - idx-vm2
+    - idx-vm3

@@ -4,7 +4,7 @@ auxs-vm0
 [role_deployer]
 auxs-vm0
 
-[splunk_env_splkdefineTAG]
+[splunk_env_gsocsan]
 auxs-vm0
 cm-vm0
 auxb-vm0
@@ -13,7 +13,6 @@ idx-vm0
 idx-vm1
 idx-vm2
 idx-vm3
-auxb-vm1
 sh-vm0
 sh-vm1
 sh-vm2
@@ -66,7 +65,6 @@ sh-vm0
 sh-vm1
 sh-vm2
 sh-vm3
-auxb-vm1
 
 [role_heavy_forwarder]
 hf-vm0
@@ -74,10 +72,10 @@ hf-vm1
 hf-vm2
 hf-vm3
 
-[output_splkdefineTAG_all]
+[output_gsocsan_all]
 auxs-vm0
 cm-vm0
-auxbig-vm0
+auxb-vm0
 auxs-vm1
 sh-vm0
 sh-vm1
@@ -88,10 +86,12 @@ hf-vm1
 hf-vm2
 hf-vm3
 
-[search_peer_splkdefineTAG_all]
+[search_peer_gsocsan_all]
 auxb-vm0
 sh-vm0
 sh-vm1
 sh-vm2
 sh-vm3
 
+[role_staging_server]
+auxb-vm1

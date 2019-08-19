@@ -1,0 +1,8 @@
+---
+splunk_indexer_volumes:
+  primary:
+    path:  "/opt/hot/hotwarm"
+  secondary:
+    path:  "/opt/cold/cold"
+  _splunk_summaries:
+    path:  "/opt/hot/_splunk_summaries"

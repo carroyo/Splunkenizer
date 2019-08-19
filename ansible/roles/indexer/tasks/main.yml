@@ -7,19 +7,79 @@
     - indexer
   debug: msg="role '{{ role_name }}' start"
 
-#- name: create volume directories
-#  tags:
-#    - splunk
-#    - indexer
-#    - create_volume_path
-#  file:
-#    path: "{{ item.value.path }}"
-#    state: directory
-#    owner: "{{splunk_user}}"
-#    group: "{{splunk_group}}"
-#    mode: 0755
-#  with_dict: "{{ splunk_indexer_volumes }}"
-#  when: splunk_indexer_volumes is defined
+- name: create partitions on hot data disks
+  tags:
+    - splunk
+    - indexer
+    - create_volume_path
+  parted:
+    device: /dev/sdd
+    number: 1
+    state: present
+
+- name: create partitions on cold data disks
+  tags:
+    - splunk
+    - indexer
+    - create_volume_path
+  parted:
+    device: /dev/sde
+    number: 1
+    state: present
+
+- name: create filesystems xfs on data disks
+  tags:
+    - splunk
+    - indexer
+    - create_volume_path
+  filesystem:
+    fstype: xfs
+    dev: /dev/sdd1
+
+- name: create filesystems xfs on data disks
+  tags:
+    - splunk
+    - indexer
+    - create_volume_path
+  filesystem:
+    fstype: xfs
+    dev: /dev/sde1
+
+- name: mount data disks volumes
+  tags:
+    - splunk
+    - indexer
+    - create_volume_path
+  mount:
+    path: /opt/hot
+    src: /dev/sdd1
+    fstype: xfs
+    state: present
+
+- name: mount data disks volumes
+  tags:
+    - splunk
+    - indexer
+    - create_volume_path
+  mount:
+    path: /opt/cold
+    src: /dev/sde1
+    fstype: xfs
+    state: present
+
+- name: create volume directories
+  tags:
+    - splunk
+    - indexer
+    - create_volume_path
+  file:
+    path: "{{ item.value.path }}"
+    state: directory
+    owner: "{{splunk_user}}"
+    group: "{{splunk_group}}"
+    mode: 0755
+  with_dict: "{{ splunk_indexer_volumes }}"
+  when: splunk_indexer_volumes is defined
 
 - name: "({{ app_name }}) check volume pathes"
   tags:

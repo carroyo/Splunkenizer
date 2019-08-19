@@ -8,3 +8,11 @@
   roles:
     - ldap_server
 
+- name: setup staging server role
+  hosts: role_staging_server
+  become: yes
+  become_user: root
+  roles:
+    - role: splunk_software
+      vars:
+        splunk_install_app: splunk

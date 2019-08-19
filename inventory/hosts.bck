@@ -1,0 +1,17 @@
+auxs-vm0
+cm-vm0 site=site0
+auxb-vm0 site=site0
+auxs-vm1 site=site0
+idx-vm0 site=site1
+idx-vm1 site=site2
+idx-vm2 site=site1
+idx-vm3 site=site2
+sh-vm0
+sh-vm1
+sh-vm2
+sh-vm3
+hf-vm0
+hf-vm1
+hf-vm2
+hf-vm3
+auxb-vm0
